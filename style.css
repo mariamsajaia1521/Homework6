@@ -1,0 +1,672 @@
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Italic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('fonts/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-header {
+    padding: 20px 0;
+    background-color: #ffffff;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #0056ff;
+}
+
+.btn-primary {
+    background-color: #0056ff;
+    color: #ffffff;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+.hero-section {
+    padding: 100px 0;
+    background-color: #f4f8ff;
+}
+
+.hero-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 520px;
+}
+
+.hero-content .subtitle {
+    display: block;
+    color: #0056ff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #111111;
+    margin: 0 0 25px 0;
+}
+
+.hero-content p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0 0 35px 0;
+}
+
+.btn-secondary {
+    background-color: #0056ff;
+    color: #ffffff;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/* ბაზისური პარამეტრები */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', 'Segoe UI', sans-serif;
+}
+
+/* მთავარი კონტეინერი - აქ ვსვამთ ფოტოს ბექგრაუნდად */
+.iako-container {
+    width: 100%;
+    min-height: 100vh;
+    /* ფოტოს ჩასმა ბექგრაუნდად */
+    background-image: url('images/newton-cradle.png');
+    background-size: cover;         
+    background-position: center;     
+    background-repeat: no-repeat;    
+    position: relative;
+    padding: 0 100px;                
+    overflow: hidden;
+}
+
+/* 
+   HEADER-ᲘᲡ სტილები
+  */
+.iako-main-header {
+    width: 100%;
+    padding: 30px 0;
+    font-size: 0; 
+}
+
+.iako-logo-area {
+    display: inline-block;
+    width: 25%;
+    font-size: 20px;
+    font-weight: 800;
+    color: #0b3558;
+    vertical-align: middle;
+}
+
+.iako-logo-icon {
+    color: #3182ce;
+    margin-right: 6px;
+    font-size: 18px;
+}
+
+.iako-logo-light {
+    color: #718096;
+    font-weight: 400;
+}
+
+/* მენიუს ლინკები */
+.iako-navigation {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.iako-link {
+    display: inline-block;
+    font-size: 14px;
+    color: #4a5568;
+    text-decoration: none;
+    margin: 0 22px;
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+
+/* ლურჯი ხაზი აქტიური ლინკისთვის ქვემოთ */
+.iako-link.active {
+    color: #3182ce;
+    border-bottom: 2px solid #3182ce;
+}
+
+/* მარჯვენა რეგისტრაციის ღილაკი */
+.iako-actions {
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.iako-btn-register {
+    display: inline-block;
+    font-size: 14px;
+    background-color: #3182ce;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 26px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/*
+   HERO SECTION-ᲘᲡ სტილები*/
+.iako-hero-section {
+    width: 100%;
+    padding-top: 80px;
+}
+
+.iako-hero-content {
+    display: inline-block;
+    width: 45%;
+    vertical-align: middle;
+}
+
+.iako-subtitle {
+    display: inline-block;
+    font-size: 11px;
+    color: #3182ce;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 25px;
+}
+
+.iako-main-title {
+    font-size: 58px;
+    color: #0c1e33;
+    line-height: 1.15;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.iako-paragraph {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 440px;
+}
+
+.iako-btn-join {
+    display: inline-block;
+    font-size: 14px;
+    background-color: #3182ce;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 34px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.iako-dots-pattern {
+    position: absolute;
+    width: 50px;
+    height: 120px;
+    left: 40px;
+    bottom: 120px;
+    background-image: radial-gradient(#a0aec0 20%, transparent 20%);
+    background-size: 10px 10px;
+    opacity: 0.3;
+}
+
+.iako-slider-dots {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0;
+}
+
+.iako-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #cbd5e0;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.iako-dot.active {
+    background-color: #3182ce;
+    width: 18px;
+    border-radius: 4px;
+}
+
+/* section 2 start - salome */
+
+/* --- ბაზისური პარამეტრები --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+/* მთავარი კონტეინერი */
+.about-section {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+/* --- მარცხენა მხარე: ტექსტი--- */
+.content {
+    flex: 1;
+    max-width: 540px;
+    z-index: 5; 
+}
+
+.subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3b82f6; 
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.content h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #0f172a; 
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+/* "tool" სიტყვის კონტეინერი */
+.highlighted-text {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+}
+
+/* შემოხაზული ლურჯი ოვალი ტექსტის ქვეშ */
+.tool {
+    position: absolute;
+    left: 21.5%;
+    top: 29%;
+    transform: translate(-50%, -50%);
+    width: 100px;  
+    height: auto;
+    z-index: -1; /* შედის ტექსტის უკან */
+    pointer-events: none; 
+}
+
+.description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* ვიდეო ბათონი */
+.video-btn {
+    width: 170px;
+    height: 50px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.video-btn:hover {
+    background-color: #2563eb;
+}
+
+.play-container {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-left: 8px;
+    margin-right: 12px;
+}
+
+.outer-circle, .inner-circle, .play-icon {
+    position: absolute;
+}
+
+.outer-circle {
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+}
+
+.inner-circle {
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 5px;
+}
+
+.play-icon {
+    width: 12px;
+    height: 12px;
+    top: 14px;
+    left: 15px;
+}
+
+/* --- მარჯვენა მხარე: მასწავლებლის ფოტო და ფონები --- */
+.image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 3;
+}
+
+/* მასწავლებლის მთავარი სურათი */
+.image-wrapper > img:not([class]) {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 24px;
+    object-fit: cover;
+    position: relative;
+    z-index: 3; /* ყოველთვის ფიგურების ზემოდან */
+}
+
+/* ლურჯი დიდი ფონი, რომელიც სურათის უკანაა */
+.rectangle {
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    width: 32%;
+    height: 80%; 
+    background-color: #f1f7fc; 
+    border-radius: 24px;
+    z-index: 1; /* მიდის ყველაზე უკან */
+}
+  
+/* --- დეკორატიული ფიგურები --- */
+
+/* ზედა პატარა ყვითელი რომბი */
+.diamond-small {
+    position: absolute;
+    top: 25px;
+    left: 62%;
+    width: 40px;
+    z-index: 4;
+}
+
+/* მარჯვენა დიდი ყვითელი რომბი */
+.diamond-big {
+    position: absolute;
+    top: -9px;
+    left: 98%;
+    width: 40px;
+    height: auto;
+    z-index: 2;
+}
+
+/* ქვედა ლურჯი ცარიელი სამკუთხედი */
+.triangle {
+    position: absolute;
+    bottom: -50px;
+    left: 70%;
+    width: 90px;
+    z-index: 4; 
+}
+
+/* მარცხენა დიდი ყვითელი რომბი */
+.diamond-corner {
+    position: absolute;
+    left: -20px;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 40px;
+    z-index: 2;
+}
+
+/* section 2 fin - salome */
+
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+.team-section {
+    position: relative;
+    background-color: #F8F9FA;
+    padding: 100px 0;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.team-decor {
+    position: absolute;
+    z-index: 1;
+    width: 72px;
+    height: auto;
+}
+
+.team-decor-top {
+    top: 20px;
+    left: 32px;
+}
+
+.team-decor-bottom {
+    bottom: 18px;
+    right: 32px;
+}
+
+.team-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.team-heading-block {
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.team-subtitle {
+    font-size: 14px;
+    font-family: 'Lato-Bold', sans-serif;
+    color: #4A90E2; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.team-main-title {
+    font-size: 42px;
+    font-family: 'Lato-Bold', sans-serif;
+    color: #0F172A; 
+    margin: 0;
+    font-weight: 700;
+}
+
+.team-cards-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0 20px;
+    overflow: visible;
+}
+
+.team-card {
+    background-color: #FFFFFF; 
+    border-radius: 10px;
+    padding: 24px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 0 0 180px;
+    min-width: 180px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02); /* ფიგმას რბილი ჩრდილი */
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.avatar-wrapper {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.team-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #ffffff;
+}
+
+.member-name {
+    font-size: 16px;
+    font-family: 'Lato-Bold', sans-serif;
+    color: #334155; 
+    margin: 0;
+    font-weight: 600;
+}
